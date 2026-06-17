@@ -1,0 +1,49 @@
+@use 'variables' as *;
+
+@mixin text-heading-2 {
+  font-family: $font-family;
+  font-size: $font-size-heading-2;
+  font-weight: $font-weight-medium;
+  line-height: $line-height-heading-2;
+}
+
+@mixin text-heading-4 {
+  font-family: $font-family;
+  font-size: $font-size-heading-4;
+  font-weight: $font-weight-medium;
+  line-height: $line-height-heading-4;
+}
+
+@mixin text-body {
+  font-family: $font-family;
+  font-size: $font-size-body;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-body;
+}
+
+@mixin text-button {
+  font-family: $font-family;
+  font-size: $font-size-button;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-button;
+}
+
+@mixin text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin cell-base {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 $spacing-cell-x;
+  min-height: $size-delete-button;
+}

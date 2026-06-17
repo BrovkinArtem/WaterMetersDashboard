@@ -1,0 +1,20 @@
+@use 'app/styles/variables' as *;
+@use 'app/styles/mixins' as *;
+
+.meterTypeCell {
+  display: flex;
+  align-items: center;
+  gap: $spacing-gap-sm;
+  padding: 2px 0;
+}
+
+.meterTypeCell__icon {
+  width: $size-icon;
+  height: $size-icon;
+  flex-shrink: 0;
+}
+
+.meterTypeCell__label {
+  @include text-body;
+  color: $color-gray-900;
+}

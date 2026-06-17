@@ -1,0 +1,13 @@
+@use 'variables' as *;
+
+body {
+  font-family: $font-family;
+  color: $color-gray-800;
+  background-color: $color-gray-50;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}

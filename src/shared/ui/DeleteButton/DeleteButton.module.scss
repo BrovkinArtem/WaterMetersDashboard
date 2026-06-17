@@ -1,0 +1,32 @@
+@use 'app/styles/variables' as *;
+@use 'app/styles/mixins' as *;
+
+.deleteButton {
+  @include flex-center;
+  width: $size-delete-button;
+  height: $size-delete-button;
+  min-width: $size-delete-button;
+  border-radius: $radius-button;
+  background-color: $color-red-100;
+  color: $color-red-700;
+  transition: background-color $transition-fast;
+
+  &:hover:not(:disabled) {
+    background-color: $color-red-200;
+  }
+
+  &:disabled {
+    background-color: $color-gray-100;
+    color: $color-gray-400;
+    cursor: not-allowed;
+  }
+}
+
+.deleteButton__icon {
+  width: $size-icon;
+  height: $size-icon;
+
+  path {
+    fill: currentColor;
+  }
+}

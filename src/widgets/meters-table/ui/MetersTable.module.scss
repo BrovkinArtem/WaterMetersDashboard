@@ -1,0 +1,36 @@
+@use 'app/styles/variables' as *;
+@use '@/app/styles/mixins' as *;
+
+.metersTable {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid $color-gray-200;
+  border-radius: $radius-table;
+  overflow: hidden;
+  background-color: $color-white;
+  min-height: 0;
+  flex: 1;
+}
+
+.metersTable__body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.metersTable__footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: $spacing-cell-y $spacing-page;
+  border-top: 1px solid $color-divider;
+  background-color: $color-white;
+  flex-shrink: 0;
+}
+
+.metersTable__message {
+  @include text-body;
+  padding: $spacing-page;
+  color: $color-gray-500;
+}

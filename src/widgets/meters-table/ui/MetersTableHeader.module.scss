@@ -1,0 +1,52 @@
+@use 'app/styles/variables' as *;
+@use 'app/styles/mixins' as *;
+
+.metersTableHeader {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: $color-table-header;
+  flex-shrink: 0;
+}
+
+.metersTableHeader__cell {
+  @include text-heading-4;
+  color: $color-gray-500;
+  padding: $spacing-cell-y $spacing-cell-x;
+  flex-shrink: 0;
+}
+
+.metersTableHeader__cell--number {
+  width: $col-number;
+  text-align: center;
+}
+
+.metersTableHeader__cell--type {
+  width: $col-type;
+}
+
+.metersTableHeader__cell--date {
+  width: $col-date;
+}
+
+.metersTableHeader__cell--automatic {
+  width: $col-automatic;
+}
+
+.metersTableHeader__cell--value {
+  width: $col-value;
+}
+
+.metersTableHeader__cell--address {
+  flex: 1 1 0;
+  min-width: $col-address-min;
+}
+
+.metersTableHeader__cell--note {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.metersTableHeader__cell--actions {
+  width: $col-actions;
+}

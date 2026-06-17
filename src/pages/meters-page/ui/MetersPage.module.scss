@@ -1,0 +1,16 @@
+@use 'app/styles/variables' as *;
+@use 'app/styles/mixins' as *;
+
+.metersPage {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-page;
+  padding: $spacing-page;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.metersPage__title {
+  @include text-heading-2;
+  color: $color-gray-800;
+}

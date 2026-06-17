@@ -1,0 +1,79 @@
+@use 'app/styles/variables' as *;
+@use 'app/styles/mixins' as *;
+
+.metersTableRow {
+  display: flex;
+  align-items: center;
+  padding: $spacing-row-y 0;
+  border-bottom: 1px solid $color-gray-200;
+  background-color: $color-white;
+  transition: background-color $transition-fast;
+
+  &:hover {
+    background-color: $color-row-hover;
+
+    .metersTableRow__delete {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.metersTableRow__cell {
+  @include cell-base;
+  @include text-body;
+  color: $color-gray-800;
+  flex-shrink: 0;
+}
+
+.metersTableRow__cell--number {
+  width: $col-number;
+  align-items: center;
+}
+
+.metersTableRow__cell--type {
+  width: $col-type;
+}
+
+.metersTableRow__cell--date {
+  width: $col-date;
+}
+
+.metersTableRow__cell--automatic {
+  width: $col-automatic;
+}
+
+.metersTableRow__cell--value {
+  width: $col-value;
+}
+
+.metersTableRow__cell--address {
+  flex: 1 1 0;
+  min-width: $col-address-min;
+}
+
+.metersTableRow__cell--note {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.metersTableRow__cell--actions {
+  width: $col-actions;
+  align-items: flex-start;
+}
+
+.metersTableRow__text--secondary {
+  color: $color-gray-600;
+}
+
+.metersTableRow__ellipsis {
+  @include text-ellipsis;
+  display: block;
+  width: 100%;
+}
+
+.metersTableRow__delete {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity $transition-fast, visibility $transition-fast;
+}

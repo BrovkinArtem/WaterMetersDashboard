@@ -1,0 +1,44 @@
+@use 'app/styles/variables' as *;
+@use 'app/styles/mixins' as *;
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pagination__list {
+  display: flex;
+  align-items: center;
+  gap: $spacing-gap-sm;
+}
+
+.pagination__button {
+  @include text-button;
+  @include flex-center;
+  min-width: 32px;
+  padding: $spacing-cell-y $spacing-cell-x;
+  border: 1px solid $color-gray-300;
+  border-radius: $radius-pagination;
+  background-color: $color-white;
+  color: $color-gray-800;
+  transition: background-color $transition-fast;
+
+  &:hover {
+    background-color: $color-gray-50;
+  }
+}
+
+.pagination__button--active {
+  background-color: $color-gray-100;
+}
+
+.pagination__ellipsis {
+  @include text-button;
+  @include flex-center;
+  min-width: 32px;
+  padding: $spacing-cell-y $spacing-cell-x;
+  border: 1px solid $color-gray-300;
+  border-radius: $radius-pagination;
+  background-color: $color-white;
+  color: $color-gray-800;
+}
